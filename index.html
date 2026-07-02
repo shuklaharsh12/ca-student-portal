@@ -35,16 +35,20 @@
     <script>
         let captchaValue = "";
 
-        function generateCaptcha() {
-            let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-            captchaValue = "";
+function generateCaptcha() {
+    let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    captchaValue = "";
 
-            for (let i = 0; i < 6; i++) {
-                captchaValue += chars.charAt(Math.floor(Math.random() * chars.length));
-            }
+    for (let i = 0; i < 6; i++) {
+        captchaValue += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
 
-            document.getElementById("captchaText").innerText = "Captcha: " + captchaValue;
-        }
+    document.getElementById("captchaText").innerHTML = "Captcha: " + captchaValue;
+}
+
+window.onload = function() {
+    generateCaptcha();
+};
 
         function checkResult() {
             let roll = document.getElementById("roll").value;
