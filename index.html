@@ -1,1 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CA Student Portal</title>
+</head>
 
+<body style="text-align:center; font-family:Arial;">
+
+    <h1>CA Student Portal</h1>
+
+    <input type="text" id="roll" placeholder="Enter Roll Number">
+    <br><br>
+
+    <button onclick="checkResult()">Get Result</button>
+
+    <div id="output"></div>
+
+    <script>
+        function checkResult() {
+            let roll = document.getElementById("roll").value;
+
+            if (roll == "636573") {
+                document.getElementById("output").innerHTML =
+                "<img src='IMG_0390.png' width='100%'>";
+            } else {
+                document.getElementById("output").innerHTML =
+                "<p style='color:red;'>Invalid Roll Number</p>";
+            }
+        }
+    </script>
+
+</body>
+</html>
